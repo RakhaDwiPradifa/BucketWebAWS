@@ -20,7 +20,7 @@ app.use(express.static('views'));
 app.post('/upload', upload.single('file'), (req, res) => {
     const fileContent = fs.readFileSync(req.file.path);
     const params = {
-        Bucket: process.env.S3_BUCKET_NAME,
+        Bucket: process.env.AWS_BUCKET_NAME,
         Key: req.file.originalname,
         Body: fileContent
     };
