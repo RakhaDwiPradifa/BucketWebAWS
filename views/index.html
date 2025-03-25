@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File ke S3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative h-screen w-screen bg-cover bg-center flex items-center justify-center gap-8"
+      style="background-image: url('/bg.jpg');">
+    
+    <!-- Overlay efek blur -->
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+    <div class="relative z-10 text-center text-white">
+        <h1 class="text-4xl font-bold underline decoration-sky-500 mb-2">Rakha Dwi Pradifa</h1>
+        <h2 class="text-2xl font-bold underline decoration-yellow-300 mb-4">152022223</h2>
+    </div>
+
+    <div class="relative z-10 bg-white/30 backdrop-blur-md p-8 rounded-lg shadow-lg w-96 border border-white/50">
+        <h2 class="text-2xl font-bold mb-4 text-center text-white">Upload File ke S3</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="flex flex-col space-y-4">
+            <input type="file" name="file" class="p-2 border border-gray-300 rounded-lg bg-white/80 text-black" />
+            <button type="submit" class="bg-sky-600 hover:bg-blue-300 text-yellow-500 py-2 rounded-lg hover:bg-blue-600 transition">Upload</button>
+        </form>
+    </div>
+
+</body>
+</html>
